@@ -22,7 +22,7 @@ export default function MenuPage() {
     .then(menuItems => setMenuItems(menuItems));
   }, []);
   return (
-    <section className="mt-8">
+    <section className="mt-8" style={{minHeight:"540px"}}>
       <Header cookies = {getCookie('c_user')} cart = {cart}/>
       {menuItems ? (
         categories.length > 0 && categories.map(c => (

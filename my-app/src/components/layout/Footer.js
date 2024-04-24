@@ -6,7 +6,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div style={{backgroundColor:"#000", margin:"-20px -40px", padding:"10px 40px"}}>
+    <div style={{backgroundColor:"#000", margin:"20px -40px -20px -40px", padding:"10px 40px"}}>
         <SectionHeaders
           subHeader = {""}
           mainHeader = {"Contact us"}

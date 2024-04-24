@@ -9,8 +9,8 @@
 * MONGO_URL
 * npm start để run chạy server 
 ## start Client 
-npm run dev
-# or
+npm run dev 
+or
 yarn dev
 # or
 pnpm dev

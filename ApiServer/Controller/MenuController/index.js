@@ -31,14 +31,14 @@ class MenuController {
         .catch((error) => {res.status(401).json({ status: error })})
       }
       createMenu(req,res) {
-        console.log(req.body.category)
-        req.body.category = new mongoose.Types.ObjectId(req.body.category? req.body.category:'661cf412be42e6d13bdbae2c');
+        console.log(req.body)
+        req.body.category = new mongoose.Types.ObjectId(req.body.category? req.body.category:'6623e7902256fee2cf6b47ad');
         const newCategory = new menuItem(req.body)
         newCategory.save()
         .then(() => res.status(200).json({status:"success"}))
         .catch((error) => console.log(error))
       }
-    deleteMenu(req,res) {
+      deleteMenu(req,res) {
         const id = req.params.id;
         menuItem.deleteOne({_id:id})
         .then(() => res.status(200).json({status:"sucess"}))

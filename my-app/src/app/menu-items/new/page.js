@@ -22,7 +22,6 @@ export default function NewMenuItemPage() {
   const [basePrice, setBasePrice] = useState('');
   const [sizes, setSizes] = useState([]);
   const [category, setCategory] = useState('');
-  const [categories, setCategories] = useState('');
   const [
     extraIngredientPrices,
     setExtraIngredientPrices,
@@ -61,7 +60,7 @@ export default function NewMenuItemPage() {
   if (!data.admin) {
     return <h1>'Not an admin.'</h1>;
   }
-
+  console.log(category)
   return (
     <section className="mt-8">
       <UserTabs isAdmin={true} />
@@ -74,7 +73,7 @@ export default function NewMenuItemPage() {
       <form
         onSubmit={ev =>
           onSubmit(ev, {
-            image,name,description,basePrice,sizes,extraIngredientPrices,
+            image,name,description,basePrice,sizes,extraIngredientPrices,category
           })
         }
         className="mt-8 max-w-2xl mx-auto">
@@ -99,6 +98,7 @@ export default function NewMenuItemPage() {
             />
             <label>Category</label>
             <select value={category} onChange={ev => setCategory(ev.target.value)}>
+            <option >nhập lựa chọn</option>
               {categoriesList?.length > 0 && categoriesList.map(c => (
                 <option key={c._id} value={c._id}>{c.name}</option>
               ))}

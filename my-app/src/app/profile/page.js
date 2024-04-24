@@ -65,7 +65,7 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="mt-8">
+    <div className="mt-8" style={{minHeight:"540px"}}>
       <Header cookies = {getCookie('c_user')}/>
       {alert? (
         <Alert/>

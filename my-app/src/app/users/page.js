@@ -27,7 +27,7 @@ export default function UsersPage() {
   }
 
   return (
-    <section className="max-w-2xl mx-auto mt-8">
+    <section className="max-w-2xl mx-auto mt-8" style={{minHeight:"540px"}}>
       <UserTabs isAdmin={true} />
       <div className="mt-8">
         {users?.length > 0 && users.map(user => (

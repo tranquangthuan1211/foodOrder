@@ -47,7 +47,7 @@ export default function LoginPage() {
   //   setLoginInProgress(false);
   // }
   return (
-    <section className="mt-8">
+    <section className="mt-8" style={{height:'480px'}}>
       <h1 className="text-center text-primary text-4xl mb-4">
         Login
       </h1>

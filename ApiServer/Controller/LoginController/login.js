@@ -19,29 +19,19 @@ class LoginController {
     }
     // login admin
     handleLogin (req, res){
-      // Admin.findOne({email:"tranquanthuan132@gmail.com"})
-      //   .then((user) => {
-      //     const validPassword = bcrypt.compare(req.body.pass, user.pass);
-      //     if(validPassword){
-      //       res.status(200).send({status:"ok"})
-      //       return;
-      //     }
-          
-      //     res.status(400).send({status:"errorPass"})
-      //   })
-      //   .catch((error) => {
-      //     res.status(401).send({error:error})
-      //   })
-      console.log(req.body)
       Users.findOne({email:req.body.email})
       .then((user) => {
-        const validPassword = bcrypt.compare(req.body.password, user.password);
-        if(validPassword){
-          console.log('ok')
-          res.status(200).json({status:"ok",id:user._id})
+        if(user) {
+          const validPassword = bcrypt.compare(req.body.password, user.password);
+          if(validPassword){
+            res.status(200).json({status:"ok",id:user._id})
+            return;
+          }
+          res.status(400).json({status:"errorPass"})
+        }else {
+          res.status(400).json({status:"errorEmail"})
           return;
         }
-        res.status(400).send({status:"errorPass"})
       })
       .catch((error) => {
             res.status(401).send({error:error})

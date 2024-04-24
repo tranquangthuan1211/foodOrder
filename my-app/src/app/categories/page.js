@@ -102,7 +102,7 @@ export default function CategoriesPage() {
     fetchCategories();
   }
   return (
-    <section className="mt-8 max-w-2xl mx-auto">
+    <section className="mt-8 max-w-2xl mx-auto" style={{minHeight:"540px"}}>
       <UserTabs isAdmin={true} />
       <form className="mt-8">
         <div className="flex gap-2 items-end">

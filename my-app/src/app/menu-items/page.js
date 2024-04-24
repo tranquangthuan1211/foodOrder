@@ -27,7 +27,7 @@ export default function MenuItemsPage() {
     return <h1>'Not an admin.'</h1>;
   }
   return (
-    <section className="mt-8 max-w-2xl mx-auto">
+    <section className="mt-8 max-w-2xl mx-auto" style={{minHeight:'540px'}}>
       <UserTabs isAdmin={true} />
       <div className="mt-8">
         <Link

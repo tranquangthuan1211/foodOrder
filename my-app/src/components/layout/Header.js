@@ -4,11 +4,12 @@ import { useState,useEffect } from "react";
 import urlFetch from "@/URl";
 import { BsCart4 } from "react-icons/bs";
 import Cart from "./Cart";
+import { deleteCookie } from "cookies-next";
+import { useRouter } from 'next/router'
 
 export default function Header(props) {
   const [user,setUser] = useState(null)
   const [displayCart, setDisplayCart] = useState(false)
-  const [size, setSize] = useState(0)
   useEffect(() => {
     fetch(urlFetch.home, {
         method: 'Post',
@@ -21,6 +22,10 @@ export default function Header(props) {
   },[props.cookies])
   const handleDisplay = () => {
     setDisplayCart(!displayCart);
+  }
+  const signOut = () => {
+    deleteCookie("c_user");
+    window.location.reload();
   }
   return (
       <header className="flex items-center justify-between">
