@@ -1,4 +1,10 @@
 ## Tran Quang Thuan
+## Techonologies and frameworks
+* TypeScript
+* Nodejs
+* ExpressJs
+* MongoDB
+## INSTALL
 ## Start Server 
 1. Thêm file env với các tham số của bạn
 * PORT
@@ -10,7 +16,7 @@
 * npm start để run chạy server 
 ## start Client 
 npm run dev 
-or
+# or
 yarn dev
 # or
 pnpm dev
