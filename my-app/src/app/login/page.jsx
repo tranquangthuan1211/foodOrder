@@ -52,7 +52,7 @@ export default function LoginPage() {
       }
     },
   });
-
+  // console.log(process.env.NEXT_PUBLIC_MONGO_URL);
   return (
     <section className="mt-14 max-w-md mx-auto">
       <h1 className="text-center text-primary text-4xl my-2">Login</h1>
